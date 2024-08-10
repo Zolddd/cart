@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img width="30" src="/images/logo.png" alt="Logo">
+                <span><h1>KhanaDotCom</h1></span>
+                
+                <div class="signlog">
+                    <button class="login"><a href="login.html">LogIn</a></button>
+                    <div class="signupdrop">
+                        <button class="signup-toggle" id="signup-toggle">SignUp</button>
+                        <ul id="sign-menu" class="sign-menu">
+                            <li><a href="customer.html">Customer</a></li>
+                            <li><a href="deliverylogin.html">Delivery Person</a></li>
+                            <li><a href="restaurantlogin.html">Restaurant</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+    <div class="dropdown">
+        <button class="menu-toggle" id="menu-toggle"><img src="/images/Menu.webp" alt="" width="27"></button>
+        <ul id="nav-menu" class="mobile-menu">
+            <li><a href="index.html"><img src="/images/Home.png" alt="">Home</a> </li>
+            <li><a href="menu.html"><img src="/images/Menu.webp" alt="">Menu</a> </li>
+            <li>
+                <div class="cart-box">
+                    <img src="/images/Cart.png" alt="Cart">
+                    <span class="item-In-Cart" id="itemincart">0</span>
+                </div>
+                <a href="cart.html">Cart</a>
+            </li>
+            <li><a href="order.html"><img src="/images/Order.png" alt="">Orders</a> </li>
+            <li><a href="profile.html"><img src="/images/Profile.jpg" alt="">Profile</a> </li>
+            <li><a href="t&c.html"><img src="/images/Help.webp" alt="">Help/Support</a> </li>
+            <li><a href="login.html"><img src="/images/Login.png" alt="">LogIn</a> </li>
+            <li><a href="poll.html"><img src="/images/Login.png" alt="">Poll</a> </li>
+        </ul>
+        <input type="text" placeholder="search" class="searchbar">
+        <div class="filters">
+            <button class="filter-toggle" id="filter-toggle">Filters</button>
+            <ol id="filter-menu" class="filter-menu">
+                <li>Dhaba <input type="checkbox"></li>
+                <li>Most Rated <input type="checkbox"></li>
+                <li>Chinese Retro <input type="checkbox"></li>
+                <li>Subway <input type="checkbox"></li>
+            </ol>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="cart">
+            <h2>Cart</h2>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="https://source.unsplash.com/random/1600×500/?Pizza" alt="">
+                    <div class="details">
+                        <p>Dominos</p>
+                        <p>Chicken Cheese Pizza</p>
+                        <p>Price: $22.00</p>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <span class="quantity">0</span>
+                        <button class="increase">+</button>
+                    </div>
+                    <a href="details.html"><button class="order-button">Order</button></a>
+                </div>
+                <div class="cart-item">
+                    <img src="https://source.unsplash.com/random/1600×500/?Pizza" alt="">
+                    <div class="details">
+                        <p>Pizza Hut</p>
+                        <p>Paneer Pizza</p>
+                        <p>Price: $17.00</p>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <span class="quantity">0</span>
+                        <button class="increase">+</button>
+                    </div>
+                    <a href="details.html"><button class="order-button">Order</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>About</h2>
+                <p>Information about KhanaDotCom, the services we offer, and our mission.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact</h2>
+                <p>Email: support@khanadotcom.com</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+            <div class="footer-section social-media">
+                <h2>Social Media</h2>
+                <a href="https://www.linkedin.com" target="_blank"><img src="/images/LinkedIn.webp" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="/images/Insta.webp" alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="/images/FB.webp" alt="Facebook"></a>
+            </div>
+            <div class="footer-section privacy">
+                <h2>Privacy Policy</h2>
+                <p><a href="privacy.html">Read our Privacy Policy</a></p>
+            </div>
+        </div>
+        <p>&copy; 2024 KhanaDotCom. All rights reserved.</p>
+      </footer>
+</body>
+<script src="cart.js"></script>
+
+</html>
