@@ -5,37 +5,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const SignupMenu = document.getElementById('sign-menu');
     const ChatBot = document.getElementById('ChatBot-Box');
 
-    document.getElementById('menu-toggle').addEventListener('click', function (event) {
-        event.stopPropagation();
-        navMenu.classList.toggle('show');
-        filterMenu.classList.remove("show");
-        SignupMenu.classList.remove("show");
-        ChatBot.classList.remove("show");
-    });
+    const menuToggle = document.getElementById('menu-toggle');
+    const filterToggle = document.getElementById('filter-toggle');
+    const signupToggle = document.getElementById('signup-toggle');
+    const botToggle = document.getElementById('bot-toggle');
 
-    document.getElementById('filter-toggle').addEventListener('click', function (event) {
-        event.stopPropagation();
-        filterMenu.classList.toggle('show');
-        navMenu.classList.remove("show");
-        SignupMenu.classList.remove("show");
-        ChatBot.classList.remove("show");
-    });
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function (event) {
+            event.stopPropagation();
+            navMenu.classList.toggle('show');
+            filterMenu.classList.remove("show");
+            SignupMenu.classList.remove("show");
+            ChatBot.classList.remove("show");
+        });
+    }
 
-    document.getElementById('signup-toggle').addEventListener('click', function (event) {
-        event.stopPropagation();
-        SignupMenu.classList.toggle('show');
-        navMenu.classList.remove("show");
-        filterMenu.classList.remove("show");
-        ChatBot.classList.remove("show");
-    });
+    if (filterToggle) {
+        filterToggle.addEventListener('click', function (event) {
+            event.stopPropagation();
+            filterMenu.classList.toggle('show');
+            navMenu.classList.remove("show");
+            SignupMenu.classList.remove("show");
+            ChatBot.classList.remove("show");
+        });
+    }
 
-    document.getElementById('bot-toggle').addEventListener('click', function (event) {
-        event.stopPropagation();
-        ChatBot.classList.toggle("show");
-        SignupMenu.classList.remove('show');
-        navMenu.classList.remove("show");
-        filterMenu.classList.remove("show");
-    });
+    if (signupToggle) {
+        signupToggle.addEventListener('click', function (event) {
+            event.stopPropagation();
+            SignupMenu.classList.toggle('show');
+            navMenu.classList.remove("show");
+            filterMenu.classList.remove("show");
+            ChatBot.classList.remove("show");
+        });
+    }
+
+    if (botToggle) {
+        botToggle.addEventListener('click', function (event) {
+            event.stopPropagation();
+            ChatBot.classList.toggle("show");
+            SignupMenu.classList.remove('show');
+            navMenu.classList.remove("show");
+            filterMenu.classList.remove("show");
+        });
+    }
 
     document.addEventListener('click', function (event) {
         if (!navMenu.contains(event.target) && !filterMenu.contains(event.target) && !SignupMenu.contains(event.target) && !ChatBot.contains(event.target)) {
@@ -77,16 +90,22 @@ document.addEventListener('DOMContentLoaded', () => {
             priceDisplay.textContent = `Price: $${calculatedPrice.toFixed(2)}`;
         }
 
-        increaseBtn.addEventListener('click', () => {
-            updateQuantity(parseInt(quantityDisplay.textContent) + 1);
-        });
+        if (increaseBtn) {
+            increaseBtn.addEventListener('click', () => {
+                updateQuantity(parseInt(quantityDisplay.textContent) + 1);
+            });
+        }
 
-        decreaseBtn.addEventListener('click', () => {
-            updateQuantity(parseInt(quantityDisplay.textContent) - 1);
-        });
+        if (decreaseBtn) {
+            decreaseBtn.addEventListener('click', () => {
+                updateQuantity(parseInt(quantityDisplay.textContent) - 1);
+            });
+        }
 
-        orderButton.addEventListener('click', () => {
-            // Order functionality can be added here if needed in the future
-        });
+        if (orderButton) {
+            orderButton.addEventListener('click', () => {
+                // Order functionality can be added here if needed in the future
+            });
+        }
     });
 });
